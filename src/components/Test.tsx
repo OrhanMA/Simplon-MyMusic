@@ -6,10 +6,8 @@ export default async function Test() {
   const code = searchParams.get("code");
   const token = await getAccessToken(code);
   const profile = await fetchProfile(token);
-  // const topTracks = await getTopTracks(token);
-  // console.log(topTracks.items);
 
-  console.log(profile);
+  console.log(`${code}`);
 
   return (
     <div className="flex flex-col gap-12">
@@ -31,7 +29,7 @@ export default async function Test() {
   );
 }
 
-async function getAccessToken(authorizationCode) {
+export async function getAccessToken(authorizationCode) {
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
   const redirectUri = "http://localhost:3000/callback";
