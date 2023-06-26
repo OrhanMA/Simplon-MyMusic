@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import SearchBar from "./SearchBar";
 export default function Header() {
   return (
     <div className="relative h-10 mb-10">
@@ -11,7 +12,8 @@ export default function Header() {
           height={32}
           alt="music icon"
         ></Image>
-        <nav className="text-lg md:text-xl font-bold flex items-center gap-6">
+        <SearchBar></SearchBar>
+        <nav className="text-md md:text-lg font-bold flex items-center gap-6">
           <Link href={"/"}>Catégories</Link>
           <Link href={"/featured"}>Featured</Link>
           <Link href={"/new-releases"}>Nouvelles sorties</Link>

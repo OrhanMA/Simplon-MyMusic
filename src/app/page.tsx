@@ -6,7 +6,6 @@ export default async function Home() {
   const categories = fetch.categories;
   const list = categories.items;
   console.log(list[0]);
-
   return (
     <div className="flex flex-col gap-y-12 pt-10 items-center ">
       <h1 className="text-4xl font-bold">Catégories</h1>
