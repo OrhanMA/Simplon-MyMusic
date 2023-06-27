@@ -14,12 +14,11 @@ export default function SearchBar() {
   return (
     <div className="flex items-center gap-6">
       <select
-        defaultValue=""
+        defaultValue="artist"
         onChange={handleSelection}
         name="search"
         id="search"
       >
-        <option value="">Catégorie</option>
         <option value="artist">Artist</option>
         <option value="playlist">Playlist</option>
         <option value="album">Album</option>
@@ -38,9 +37,15 @@ export default function SearchBar() {
         onClick={() => {
           if (inputRef.current.value) {
             console.log(inputRef.current.value);
-            router.push(
-              `/search?q=${inputRef.current.value}&type=${selection}&market=FR&offset=0`
-            );
+            if (!selection) {
+              router.push(
+                `/search?q=${inputRef.current.value}&type=artist&market=FR&offset=0`
+              );
+            } else {
+              router.push(
+                `/search?q=${inputRef.current.value}&type=${selection}&market=FR&offset=0`
+              );
+            }
           } else {
             alert("t'as rien écrit poto");
             console.log("t'as rien écrit poto");
