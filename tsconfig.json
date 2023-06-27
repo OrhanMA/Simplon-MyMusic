@@ -28,7 +28,15 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/api/spotify/route.js"
+    "src/app/api/spotify/route.js",
+    "src/components/ResultCard.jsx",
+    "src/components/SearchBar.tsx",
+    "src/components/ResultTrackCard.tsx",
+    "src/components/ResultShowCard.tsx",
+    "src/components/ResultPlaylistCard.tsx",
+    "src/components/ResultAlbumCard.tsx",
+    "src/components/ArtistCard.tsx",
+    "src/app/search/SearchResults.jsx"
   ],
   "exclude": ["node_modules"]
 }

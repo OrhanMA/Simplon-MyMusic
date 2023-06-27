@@ -11,6 +11,8 @@ export default function SearchBar() {
     SetSelection(e.target.value);
     console.log(selection);
   }
+  console.log(inputRef);
+
   return (
     <div className="flex items-center gap-6">
       <select
