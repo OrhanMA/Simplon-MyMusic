@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ArtistCard({ artist }) {
@@ -18,7 +19,7 @@ export default function ArtistCard({ artist }) {
         </div>
       )}
       <div className="flex flex-col gap-4">
-        <p className="text-2xl">{artist.name}</p>
+        <p className="text-2xl font-bold">{artist.name}</p>
         <p>{artist.followers.total} followers</p>
         {artist.genres && (
           <p className="text-sm text-gray-500">
@@ -27,6 +28,12 @@ export default function ArtistCard({ artist }) {
               .join(", ")}
           </p>
         )}
+        <Link
+          className="text-green-500 hover:underline"
+          href={artist.external_urls.spotify}
+        >
+          View profile on Spotify
+        </Link>
       </div>
     </div>
   );
