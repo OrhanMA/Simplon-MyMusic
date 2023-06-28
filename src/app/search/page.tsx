@@ -1,5 +1,5 @@
 import React from "react";
-import SearchResults from "./SearchResults";
+import SearchResults from "../../components/SearchResults";
 import { getSpotifyAuthToken } from "../api/fetchFunction";
 export default async function Page() {
   const token = await getSpotifyAuthToken();

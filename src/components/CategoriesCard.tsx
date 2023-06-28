@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CategoriesCard({ playlist }) {
   return (
-    <div className="flex flex-col gap-y-6">
+    <div className="flex flex-col items-center gap-y-6">
       <p className="text-xl font-bold">{playlist.name}</p>
       <Image
         className="my-4"

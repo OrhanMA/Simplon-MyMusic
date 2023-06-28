@@ -12,13 +12,15 @@ export default async function Page() {
   // console.log(playlists[0]);
 
   return (
-    <div className="min-w-screen flex flex-col items-center gap-12 pt-12">
-      <h1 className="text-4xl font-bold mb-10">{message}</h1>
+    <div className="min-w-screen flex flex-col items-center gap-12">
+      <h1 className="text-4xl font-bold mb-10 hover:text-green-500 hover:duration-150">
+        {message}
+      </h1>
       <ul className="w-full justify-evenly flex flex-wrap gap-y-12 gap-x-6">
         {playlists.map((playlist) => {
           return (
             <div
-              className="flex flex-col items-center text-center gap-y-6 w-1/2  sm:w-1/3 md:w-1/4 lg:w-1/5 p-6 rounded-xl bg-neutral-900"
+              className="flex flex-col items-center text-center gap-y-6 w-1/2  sm:w-1/3 md:w-1/4 lg:w-1/5 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-900 hover:bg-white hover:border-2 hover:scale-105 hover:border-green-400 hover:duration-200 hover:text-green-500"
               key={playlist.id}
             >
               <Link

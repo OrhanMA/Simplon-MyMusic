@@ -36,7 +36,7 @@
     "src/components/ResultPlaylistCard.tsx",
     "src/components/ResultAlbumCard.tsx",
     "src/components/ArtistCard.tsx",
-    "src/app/search/SearchResults.jsx"
+    "src/components/SearchResults.jsx"
   ],
   "exclude": ["node_modules"]
 }

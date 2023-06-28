@@ -11,9 +11,9 @@ export default function FeaturedCard({ playlist }) {
         height={300}
         alt={`${playlist.name} playlist photo`}
       ></Image>
-      <p className="text-neutral-300">{playlist.description}</p>
+      <p className="dark:text-neutral-300">{playlist.description}</p>
       <p>
-        <span className="text-neutral-300 mr-1 ">par:</span>
+        <span className="dark:text-neutral-300 mr-1 ">par:</span>
         {playlist.owner.display_name}
       </p>
     </>

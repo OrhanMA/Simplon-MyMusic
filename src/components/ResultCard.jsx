@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaHeartCirclePlus } from "react-icons/fa6";
 
 export default function ResultCard({ type, data }) {
   return (
@@ -9,10 +10,10 @@ export default function ResultCard({ type, data }) {
         <div>
           {data.album.images.length > 0 ? (
             <Image
-              className="aspect-square"
+              className="object-cover"
               src={data.album.images[0].url}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               alt={`${data.name} profile picture`}
             ></Image>
           ) : (
@@ -26,9 +27,10 @@ export default function ResultCard({ type, data }) {
         <div>
           {data.images.length > 0 ? (
             <Image
+              className="object-cover"
               src={data.images[0].url}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               alt={`${data.name} profile picture`}
             ></Image>
           ) : (
@@ -87,12 +89,15 @@ export default function ResultCard({ type, data }) {
             <p className="text-lg">{data.total_episodes} episodes</p>
           </div>
         )}
-        <Link
-          className="text-green-500 hover:underline"
-          href={data.external_urls.spotify}
-        >
-          View profile on Spotify
-        </Link>
+        <div className="flex items-center gap-12">
+          <Link
+            className="text-green-500 hover:underline"
+            href={data.external_urls.spotify}
+          >
+            Open on Spotify
+          </Link>
+          <FaHeartCirclePlus className="hover:cursor-pointer" />
+        </div>
       </div>
     </div>
   );
