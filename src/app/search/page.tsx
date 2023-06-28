@@ -5,7 +5,7 @@ export default async function Page() {
   const token = await getSpotifyAuthToken();
   return (
     <div>
-      <SearchResults token={token}></SearchResults>
+      <SearchResults token={token} />
     </div>
   );
 }

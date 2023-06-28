@@ -40,6 +40,26 @@ const fetchClientSpotifyApi = async (token, type, query) => {
     }
   }
 };
+const fetchTrackDetailsClient = async (token, id) => {
+  if (token) {
+    try {
+      const response = await axios.get(
+        "https://api.spotify.com/v1/" + `tracks/${id}?market=FR`,
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        return response.data;
+      }
+    } catch (error) {
+      return null;
+    }
+  }
+};
 
 const getSpotifyAuthToken = async () => {
   const options = {
@@ -72,4 +92,4 @@ const getSpotifyAuthToken = async () => {
 };
 
 export default fetchSpotifyApi;
-export { getSpotifyAuthToken, fetchClientSpotifyApi };
+export { getSpotifyAuthToken, fetchClientSpotifyApi, fetchTrackDetailsClient };
