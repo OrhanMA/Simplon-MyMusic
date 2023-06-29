@@ -5,7 +5,7 @@ export default async function Home() {
   const fetch = await fetchSpotifyApi("browse/categories?country=FR&offset=0");
   const categories = fetch.categories;
   const list = categories.items;
-  console.log(list[0]);
+  // console.log(list[0]);
   return (
     <div className="flex flex-col gap-y-12 items-center ">
       <h1 className="text-4xl font-bold hover:text-green-500 hover:duration-150">
