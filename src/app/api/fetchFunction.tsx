@@ -91,5 +91,42 @@ const getSpotifyAuthToken = async () => {
   return fetchToken();
 };
 
+const fetchDetailsClient = async (token, id, type) => {
+  if (token) {
+    try {
+      let url;
+      if (type === "track") {
+        url = `https://api.spotify.com/v1/tracks/${id}?market=FR`;
+      } else if (type === "album") {
+        url = `https://api.spotify.com/v1/albums/${id}?market=FR`;
+      } else if (type === "artist") {
+        url = `https://api.spotify.com/v1/artists/${id}`;
+      } else if (type === "playlist") {
+        url = `https://api.spotify.com/v1/playlists/${id}?market=FR`;
+      } else if (type === "show") {
+        url = `https://api.spotify.com/v1/shows/${id}?market=FR`;
+      } else {
+        throw new Error("Invalid type");
+      }
+
+      const response = await axios.get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
+
+      if (response.status === 200) {
+        return response.data;
+      }
+    } catch (error) {
+      return null;
+    }
+  }
+};
 export default fetchSpotifyApi;
-export { getSpotifyAuthToken, fetchClientSpotifyApi, fetchTrackDetailsClient };
+export {
+  getSpotifyAuthToken,
+  fetchClientSpotifyApi,
+  fetchTrackDetailsClient,
+  fetchDetailsClient,
+};

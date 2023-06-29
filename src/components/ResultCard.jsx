@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaHeartCirclePlus } from "react-icons/fa6";
+import {
+  transformDate,
+  formatMilliseconds,
+} from "../../src/sourceFunctions/source";
 
 export default function ResultCard({ type, data, img }) {
   return (
@@ -41,7 +45,7 @@ export default function ResultCard({ type, data, img }) {
           {type === "album" && (
             <>
               <p className="text-xl">{data.artists[0].name}</p>
-              <p>Sortie: {data.release_date}</p>
+              <p>Sortie: {transformDate(data.release_date)}</p>
               <p>{data.total_tracks} sons</p>
             </>
           )}
@@ -55,7 +59,7 @@ export default function ResultCard({ type, data, img }) {
             <>
               <p className="text-xl font-bold">{data.artists[0].name}</p>
               <p>{formatMilliseconds(data.duration_ms)}</p>
-              <p>Sortie: {data.album.release_date}</p>
+              <p>Sortie: {transformDate(data.album.release_date)}</p>
             </>
           )}
           {type === "show" && (
@@ -79,11 +83,4 @@ export default function ResultCard({ type, data, img }) {
       </div>
     </div>
   );
-}
-
-function formatMilliseconds(milliseconds) {
-  const totalSeconds = Math.floor(milliseconds / 1000);
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-  return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 }
