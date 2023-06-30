@@ -41,7 +41,12 @@
     "src/components/FeaturedCard.jsx",
     "src/app/featured/page.jsx",
     "src/app/page.jsx",
-    "src/app/api/fetchFunction.jsx"
+    "src/app/api/fetchFunction.jsx",
+    "src/components/Header.jsx",
+    "src/components/CategoriesCard.jsx",
+    "src/app/layout.jsx",
+    "src/app/search/page.jsx",
+    "src/app/new-releases/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
