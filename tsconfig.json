@@ -40,7 +40,8 @@
     "src/app/search/details/[id]",
     "src/components/FeaturedCard.jsx",
     "src/app/featured/page.jsx",
-    "src/app/page.jsx"
+    "src/app/page.jsx",
+    "src/app/api/fetchFunction.jsx"
   ],
   "exclude": ["node_modules"]
 }

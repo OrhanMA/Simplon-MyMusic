@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const fetchSpotifyApi = async (url: string) => {
+const fetchSpotifyApi = async (url) => {
   const token = await getSpotifyAuthToken();
 
   if (token) {
