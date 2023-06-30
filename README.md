@@ -1,3 +1,9 @@
+# Simplon MyMusic
+
+LIEN VERS LE PROJET HOSTÉ: [https://simplon-my-music.vercel.app/](https://simplon-my-music.vercel.app/)
+
+<br/>
+
 ## Démarrage du projet
 
 L'utilisation de l'application nécessite la création d'un compte développeur Spotify et la création d'une application sur le dashboard de votre profil.
@@ -24,6 +30,8 @@ SPOTIFY_USER_SECRET=<SPOTIFY_SECRET_ID>
 
 Ouvrir le localhost: [http://localhost:3000](http://localhost:3000)
 
+<br/>
+
 ## À propos du projet
 
 Stack technique:
@@ -35,6 +43,8 @@ Dépendances:
 
 - React icons pour les icons
 - Axios pour les requêtes
+
+<br/>
 
 ## Contexte
 
