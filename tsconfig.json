@@ -44,7 +44,7 @@
     "src/app/api/fetchFunction.jsx",
     "src/components/Header.jsx",
     "src/components/CategoriesCard.jsx",
-    "src/app/layout.jsx",
+    "src/app/layout.tsx",
     "src/app/search/page.jsx",
     "src/app/new-releases/page.jsx"
   ],
