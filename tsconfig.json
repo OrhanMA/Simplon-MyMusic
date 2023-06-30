@@ -30,14 +30,17 @@
     ".next/types/**/*.ts",
     "src/app/api/spotify/route.js",
     "src/components/ResultCard.jsx",
-    "src/components/SearchBar.tsx",
+    "src/components/SearchBar.jsx",
     "src/components/ResultTrackCard.tsx",
     "src/components/ResultShowCard.tsx",
     "src/components/ResultPlaylistCard.tsx",
     "src/components/ResultAlbumCard.tsx",
     "src/components/ArtistCard.tsx",
     "src/components/SearchResults.jsx",
-    "src/app/search/details/[id]"
+    "src/app/search/details/[id]",
+    "src/components/FeaturedCard.jsx",
+    "src/app/featured/page.jsx",
+    "src/app/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
