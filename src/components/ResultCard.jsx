@@ -9,10 +9,11 @@ import {
 
 export default function ResultCard({ type, data, img }) {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex flex-col lg:flex-row items-center gap-4  ">
       <div>
         {img.images.length > 0 ? (
           <Image
+            className="max-w-[150px] max-h-[150px] object-cover"
             src={img.images[0].url}
             width={200}
             height={200}
@@ -25,9 +26,9 @@ export default function ResultCard({ type, data, img }) {
         )}
       </div>
 
-      <div className="flex flex-col gap-4">
-        <div>
-          <p className="text-2xl font-bold">{data.name}</p>
+      <div className="flex flex-col items-center text-center gap-6">
+        <div className="flex flex-col gap-2">
+          <p className="text-lg font-bold">{data.name}</p>
           {type === "artist" && (
             <>
               <p>{data.followers.total} followers</p>
@@ -44,20 +45,20 @@ export default function ResultCard({ type, data, img }) {
           )}
           {type === "album" && (
             <>
-              <p className="text-xl">{data.artists[0].name}</p>
+              <p className="text-md">{data.artists[0].name}</p>
               <p>Sortie: {transformDate(data.release_date)}</p>
               <p>{data.total_tracks} sons</p>
             </>
           )}
           {type === "playlist" && (
             <>
-              <p className="text-xl">{data.owner.display_name}</p>
-              <p>{data.description}</p>
+              <p className="text-md">{data.owner.display_name}</p>
+              {/* <p className="text-sm">{data.description}</p> */}
             </>
           )}
           {type === "track" && (
             <>
-              <p className="text-xl font-bold">{data.artists[0].name}</p>
+              <p className="text-md font-bold">{data.artists[0].name}</p>
               <p>{formatMilliseconds(data.duration_ms)}</p>
               <p>Sortie: {transformDate(data.album.release_date)}</p>
             </>
@@ -65,7 +66,7 @@ export default function ResultCard({ type, data, img }) {
           {type === "show" && (
             <>
               {data.publisher !== data.name && (
-                <p className="text-xl font-bold">{data.publisher}</p>
+                <p className="text-md font-bold">{data.publisher}</p>
               )}
               <p className="text-lg">{data.total_episodes} episodes</p>
             </>

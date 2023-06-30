@@ -38,9 +38,12 @@ export default function DetailTop({ data, type }) {
                 <>{formatNumber(data.followers.total)} fans / mois</>
               )}
               {type == "playlist" && (
-                <div className="w-full justify-center flex items-center gap-4">
-                  {formatNumber(data.followers.total)}
-                  <FaHeart />
+                <div className="w-full justify-center flex flex-col items-center gap-6">
+                  <p>Playlist par: {data.owner.display_name}</p>
+                  <p className="flex gap-4">
+                    {formatNumber(data.followers.total)}
+                    <FaHeart />
+                  </p>
                 </div>
               )}
               {type == "album" && (

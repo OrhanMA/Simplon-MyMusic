@@ -20,7 +20,7 @@ export default async function Page() {
         {playlists.map((playlist) => {
           return (
             <div
-              className="flex flex-col items-center text-center gap-y-6 w-1/2  sm:w-1/3 md:w-1/4 lg:w-1/5 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-900 hover:bg-white hover:border-2 hover:scale-105 hover:border-green-400 hover:duration-200 hover:text-green-500"
+              className="flex flex-col items-center text-center gap-y-6 w-2/3  sm:w-2/5 md:w-1/4 lg:w-1/5 p-6 rounded-xl bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-900 hover:bg-white hover:border-2 hover:scale-105 hover:border-green-400 hover:duration-200 hover:text-green-500"
               key={playlist.id}
             >
               <Link

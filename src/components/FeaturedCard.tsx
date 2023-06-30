@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 export default function FeaturedCard({ playlist }) {
   return (
-    <div className="flex flex-col items-center gap-y-6">
-      <h2 className="font-bold text-xl">{playlist.name}</h2>
+    <div className="flex flex-col items-center ">
+      <h2 className="font-bold text-xl h-10">{playlist.name}</h2>
       <Image
         className="my-6"
         src={playlist.images[0].url}

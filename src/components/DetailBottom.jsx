@@ -57,7 +57,7 @@ export default function DetailBottom({ data, type }) {
                       key={type === "playlist" ? song.track.id : song.id}
                     >
                       <p className="w-1/3 text-start">
-                        {index + 1}.{" "}
+                        {index + 1}.
                         {type === "playlist" ? song.track.name : song.name}
                       </p>
                       <p className="w-1/3 text-center">
