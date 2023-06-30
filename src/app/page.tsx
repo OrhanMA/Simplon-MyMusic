@@ -11,8 +11,11 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-y-12 items-center ">
       <h1 className="text-4xl font-bold hover:text-green-500 hover:duration-150">
-        Catégories
+        Bonjour!
       </h1>
+      <h2 className="text-3xl font-bold hover:text-green-500 hover:duration-150">
+        Commencez votre écoute en choisissant une catégorie
+      </h2>
       <ul className="w-full flex justify-evenly flex-wrap gap-y-12 gap-x-6">
         {list.map((playlist) => {
           return (
