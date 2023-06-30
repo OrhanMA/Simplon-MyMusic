@@ -3,6 +3,8 @@ import CategoriesCard from "@/components/CategoriesCard";
 import Link from "next/link";
 export default async function Home() {
   const fetch = await fetchSpotifyApi("browse/categories?country=FR&offset=0");
+  // console.log(fetch);
+
   const categories = fetch.categories;
   const list = categories.items;
   // console.log(list[0]);

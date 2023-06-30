@@ -9,7 +9,7 @@ export default async function SearchResults({ token }) {
   const typeString = type + `s`;
   const query = searchParams.get("q");
   const response = await fetchClientSpotifyApi(token, type, query);
-  // console.log(response);
+  console.log(response);
 
   return (
     <div className="w-full flex flex-col gap-y-12 items-center">

@@ -8,8 +8,8 @@ export default function CategoriesCard({ playlist }) {
       <Image
         className="my-4"
         src={playlist.icons[0].url}
-        width={100}
-        height={100}
+        width={175}
+        height={175}
         alt={playlist.name + "icon"}
       ></Image>
     </div>

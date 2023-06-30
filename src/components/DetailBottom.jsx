@@ -9,7 +9,9 @@ export default function DetailBottom({ data, type }) {
       {(type == "playlist" || type == "album" || type == "show") && (
         <div className="w-full lg:w-2/3 flex flex-col gap-12">
           {(type == "playlist" || type == "show") && (
-            <h3 className="text-2xl font-semibold">{data.description}</h3>
+            <>
+              <h3 className="text-2xl font-semibold">{data.description}</h3>
+            </>
           )}
           {type == "show" && (
             <div className="flex items-center justify-evenly text-center">
@@ -31,9 +33,11 @@ export default function DetailBottom({ data, type }) {
                       <p className="w-1/5 text-sm sm:text-md text-start">
                         {episode.name}
                       </p>
-                      <p className="w-2/5 text-start text-sm font-normal">
-                        {episode.description}
-                      </p>
+                      {data.description && (
+                        <p className="w-2/5 text-start text-sm font-normal">
+                          {episode.description}
+                        </p>
+                      )}
                       <p className="w-1/5 text-end">
                         {formatMilliseconds(episode.duration_ms)}
                       </p>

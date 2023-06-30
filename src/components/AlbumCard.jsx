@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AlbumCard({ album }) {
   return (
     <div>
-      <div className="flex flex-col gap-y-6">
+      <div className="flex flex-col items-center gap-y-6">
         <Image
           src={album.images[0].url}
           width={200}
